@@ -3,10 +3,10 @@ services:
     name: iron-river-xiangqi
     runtime: node
     plan: free
-    buildCommand: npm ci && npm run build
+    buildCommand: npm install --no-audit --no-fund && npm run build
     startCommand: npm start
     healthCheckPath: /
     autoDeploy: true
     envVars:
       - key: NODE_VERSION
-        value: "22"
+        value: "20"
